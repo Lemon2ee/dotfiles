@@ -25,8 +25,8 @@ config.font = wezterm.font 'Fira Code'
 config.harfbuzz_features = {"zero" , "ss01", "cv05"}
 
 -- Background beautify
-config.window_background_opacity = 0.2
-config.macos_window_background_blur = 50
+config.window_background_opacity = 0.7
+config.macos_window_background_blur = 20
 config.text_background_opacity = 1
 
 -- and finally, return the configuration to wezterm
