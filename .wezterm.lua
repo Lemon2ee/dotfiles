@@ -10,6 +10,17 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+wezterm.on('update-right-status', function(window, pane)
+  local date = wezterm.strftime '%Y-%m-%d %H:%M:%S'
+
+  -- Make it italic and underlined
+  window:set_right_status(wezterm.format {
+    { Attribute = { Underline = 'Single' } },
+    { Attribute = { Italic = true } },
+    { Text = date },
+  })
+end)
+
 -- This is where you actually apply your config choices
 
 -- Window behavior and color scheme
@@ -20,12 +31,13 @@ config.window_decorations = "RESIZE"
 config.adjust_window_size_when_changing_font_size = false
 
 -- Font configuration
-config.font_size = 16
-config.font = wezterm.font 'Fira Code'
-config.harfbuzz_features = {"zero" , "ss01", "cv05"}
+config.font_size = 12
+config.font =c
+  wezterm.font('JetBrains Mono', { weight = 'Bold' })
+-- config.harfbuzz_features = {"zero" , "ss01", "cv05"}
 
 -- Background beautify
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 config.text_background_opacity = 1
 
