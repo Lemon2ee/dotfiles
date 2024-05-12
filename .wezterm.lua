@@ -31,14 +31,14 @@ config.window_decorations = "RESIZE"
 config.adjust_window_size_when_changing_font_size = false
 
 -- Font configuration
-config.font_size = 12
-config.font =c
-  wezterm.font('JetBrains Mono', { weight = 'Bold' })
+config.font_size = 16
+config.font =
+  wezterm.font('Hack Nerd Font', { weight = 'Bold' })
 -- config.harfbuzz_features = {"zero" , "ss01", "cv05"}
 
 -- Background beautify
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.6
+config.macos_window_background_blur = 90
 config.text_background_opacity = 1
 
 -- and finally, return the configuration to wezterm
